@@ -53,7 +53,7 @@ def accueil():
     docker = "<p>Servie par un conteneur Docker</p>" if os.environ.get("SERVIE_PAR") == "docker" else ""
     return f"""<!doctype html><meta charset="utf-8"><title>Kelvia</title>
 <h1>{FESTIVAL}</h1>
-<p>Billetterie Kelvia : jusqu'à {QUANTITE_MAX} billets par commande.</p>
+<p>Billetterie officielle Kelvia : jusqu'à {QUANTITE_MAX} billets par commande.</p>
 <ul>{lignes}</ul>
 {docker}"""
 
