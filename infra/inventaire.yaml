@@ -9,4 +9,4 @@ recette:
 production:
   hosts: {vm-web-2: }
   vars: {environnement: PRODUCTION,
-         maintenance: true}
+         maintenance: false}
