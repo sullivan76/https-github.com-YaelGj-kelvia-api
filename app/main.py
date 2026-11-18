@@ -18,8 +18,8 @@ CATEGORIES = {
 app = FastAPI(title="Kelvia")
 
 # TP 4 : décommentez les deux lignes suivantes pour exposer /metrics à Prometheus.
-# from prometheus_fastapi_instrumentator import Instrumentator
-# Instrumentator().instrument(app, latency_lowr_buckets=(0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1)).expose(app)
+from prometheus_fastapi_instrumentator import Instrumentator
+Instrumentator().instrument(app, latency_lowr_buckets=(0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1)).expose(app)
 
 
 class Commande(BaseModel):
